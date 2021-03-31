@@ -1,6 +1,7 @@
 package org.example.PageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,7 +61,7 @@ public class HomePage {
 
     public void open() {
         driver.get("https://playoverwatch.com");
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     public String GetBattleTag(){
