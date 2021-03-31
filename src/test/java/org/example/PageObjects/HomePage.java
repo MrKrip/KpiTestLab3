@@ -56,11 +56,12 @@ public class HomePage {
 
     public void Authorization(){
         SiteNavigation.findElement(Login).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(AccountName));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Heroes));
     }
 
     public void open() {
         driver.get("https://playoverwatch.com");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("site")));
         //driver.manage().window().setSize(new Dimension(1400,800));
     }
 
