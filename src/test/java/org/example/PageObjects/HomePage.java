@@ -1,9 +1,6 @@
 package org.example.PageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,7 +52,10 @@ public class HomePage {
     private By InstagramLink=By.cssSelector("[class=\"SocialIcon-link SocialIcon-link--Instagram\"]");
 
     public void Authorization(){
-        SiteNavigation.findElement(Login).click();
+        //SiteNavigation.findElement(Login).click();
+        WebElement element = driver.findElement(Login);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
         wait.until(ExpectedConditions.visibilityOfElementLocated(Heroes));
     }
 
@@ -101,21 +101,30 @@ public class HomePage {
 
     public void FindPlayer()
     {
-        SiteNavigation.findElement(Community).click();
-        SiteNavigation.findElement(Search).click();
+        //SiteNavigation.findElement(Community).click();
+        //SiteNavigation.findElement(Search).click();
+        WebElement element = driver.findElement(Search);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class=\"search-input\"]")));
     }
 
     public void HeroList()
     {
         SiteNavigation.findElement(Heroes).click();
+        WebElement element = driver.findElement(Heroes);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("site")));
     }
 
     public void EventArchive()
     {
-        SiteNavigation.findElement(Events).click();
-        SiteNavigation.findElement(Archive).click();
+        //SiteNavigation.findElement(Events).click();
+        //SiteNavigation.findElement(Archive).click();
+        WebElement element = driver.findElement(Archive);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("site")));
     }
 }
