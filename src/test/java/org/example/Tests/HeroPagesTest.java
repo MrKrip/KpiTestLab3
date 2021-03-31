@@ -87,19 +87,6 @@ public class HeroPagesTest extends WebDriverConfig {
         Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/brigitte/"));
     }
 
-    @Test
-    public void GenjiTest()
-    {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.open();
-        homePage.HeroList();
-
-        HeroPage heroPage = PageFactory.initElements(driver, HeroPage.class);
-        heroPage.CheckGenji();
-
-        Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/genji/"));
-    }
-
 
 
 }
