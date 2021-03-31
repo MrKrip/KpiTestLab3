@@ -100,44 +100,6 @@ public class HeroPagesTest extends WebDriverConfig {
         Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/genji/"));
     }
 
-    @Test
-    public void ZenyattaTest()
-    {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.open();
-        homePage.HeroList();
-
-        HeroPage heroPage = PageFactory.initElements(driver, HeroPage.class);
-        heroPage.CheckZenyatta();
-
-        Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/zenyatta/"));
-    }
-
-    @Test
-    public void ReaperTest()
-    {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.open();
-        homePage.HeroList();
-
-        HeroPage heroPage = PageFactory.initElements(driver, HeroPage.class);
-        heroPage.CheckReaper();
-
-        Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/reaper/"));
-    }
-
-    @Test
-    public void ZaryaTest()
-    {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.open();
-        homePage.HeroList();
-
-        HeroPage heroPage = PageFactory.initElements(driver, HeroPage.class);
-        heroPage.CheckZarya();
-
-        Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/zarya/"));
-    }
 
 
 }
