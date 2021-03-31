@@ -15,6 +15,11 @@ public class WebDriverConfig {
     public void setUp() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("window-size=1920,1080");
+        chromeOptions.addArguments("disable-infobars");
+        chromeOptions.addArguments("--incognito");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--allow-insecure-localhost");
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, 10);
     }
