@@ -87,6 +87,4 @@ public class HeroPagesTest extends WebDriverConfig {
         Assert.assertTrue(heroPage.getHeroUrl().equals("https://playoverwatch.com/ru-ru/heroes/brigitte/"));
     }
 
-
-
 }

@@ -111,7 +111,7 @@ public class HomePage {
 
     public void HeroList()
     {
-        SiteNavigation.findElement(Heroes).click();
+        //SiteNavigation.findElement(Heroes).click();
         WebElement element = driver.findElement(Heroes);
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
