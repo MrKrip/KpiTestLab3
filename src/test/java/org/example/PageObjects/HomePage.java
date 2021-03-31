@@ -61,7 +61,7 @@ public class HomePage {
 
     public void open() {
         driver.get("https://playoverwatch.com");
-        driver.manage().window().setSize(new Dimension(1382,744));
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     public String GetBattleTag(){
